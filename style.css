@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Borel', cursive; */
+}
+
+body {
+ position: relative;
+ overflow-x: hidden;
+ background: var(--black);
+ color: var(--text);
+}
+
+::selection{
+  background-color: #D35400;
+  color: #F6BA53;
+}
+
+::-webkit-scrollbar {
+  height: .5rem;
+  width: 0.5rem;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(78, 77, 77);
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+:root {
+  --text: #2a2a2a;
+  --black: #ece9e9;
+  --title: #141414;
+}
+
+body::selection{
+  color: #D35400;
+  background: #F6BA53;
+}
+
+.loader{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+#loader_t{
+  background: #0c0c0c;
+  z-index: 9999;
+}
+
+#loader_r{
+  background: #151515;
+  z-index: 9990;
+}
+
+#loader_b{
+  background:#282727;
+  z-index: 9980;
+}
+
+#loader_l{
+  background: #555452;
+  z-index: 9970;
+}
+
+
+.heading {
+  font-size: 9vw;
+  color: var(--title);
+  font-weight: 800;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ///////////////////////////////////////////// header code start ////////////////////////////////////////////  */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1vw 7vw 0vw 7vw;
+  z-index: 1000;
+  background: var(--black);
+  color: var(--text);
+  border-bottom: 1px solid var(--title);
+}
+
+.header .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  text-decoration: none;
+}
+
+.header .flex a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 2vw;
+}
+
+.header .flex .navbar a {
+  margin-left: 3rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  background: transparent;
+}
+
+.header .flex .navbar a:hover {
+  color: var(--text);
+}
+
+#menu-btn {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.logo-h {
+  font-size: 3rem;
+}
+
+/* //////////////////////////////////// header code end ////////////////////////////////////  */
+.home {
+  padding: 9vw 7vw 3vw 7vw;
+}
+
+.hero_left {
+  width: 65%;
+  height: 100%;
+}
+
+.hero_left .hero_left_text h2 {
+  font-size: 4em;
+  color: var(--text);
+}
+
+.hero_left .hero_left_text h3 {
+  font-size: 2em;
+  color: var(--text);
+}
+
+.hero_left .hero_left_text p {
+  font-size: 1em;
+  color: var(--text);
+  margin-top: 10px;
+}
+
+.hero_left_arrow {
+  font-size: 4em;
+  margin-top: 3vw;
+  color: var(--text);
+  z-index: 10;
+}
+
+.hero_right {
+  width: 35%;
+  height: 100%;
+}
+
+.hero_right .hero_right_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero_right_btn a {
+  text-decoration: none;
+  font-family: 'Borel', cursive;
+  font-size: 2rem;
+  border-bottom: 1px solid var(--text);
+  color: var(--text);
+}
+
+/* ....................................... about section start ................  */
+.about{
+  padding: 2vw 7vw 3vw 7vw;
+  text-align: center;
+}
+.about_content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .heading{
+  color: var(--text);
+  font-weight: 700;
+}
+.about_content h2 {
+  font-size: 5vw;
+  color: var(--text);
+}
+
+.about_content p {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+/* ....................................... project section start ................  */
+.project{
+  padding: 0vw 7vw 3vw 7vw;
+}
+.project_container{
+  width: 100%;
+  text-align: center;
+  padding: 1vw 5vw 0vw 5vw;
+}
+.project_container h1{
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.project_container h1>span{
+    color: #ca880d;
+}
+.project .project_content{
+     width: 100%;
+    margin: 0 auto;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     gap: 2vw;
+}
+.project .project_content .project_item{
+  width: 47%;
+  height: 180px;
+  overflow: hidden;
+  border: 1px solid var(--title);
+}
+.project .project_content .project_item img{
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: 0.7s ease all;
+  -o-transition: 0.7s ease all;
+  transition: 0.7s ease all;
+}
+.project .project_content .project_item:hover img{
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+}
+/* /................................ skills section start .................................  */
+.skills{
+  padding: 2vw 4vw 2vw 4vw;
+  text-align: center;
+}
+.skills .heading{
+  color: var(--text);
+  font-weight: 600;
+}
+.skills h2{
+  font-size: 4vw;
+  color: var(--white);
+text-align: center;
+}
+.skills h2>span{
+  color: #38CDFA;
+}
+.skills .skills_content{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5vw;
+  padding: 3vw;
+}
+.skills .skills_content>i{
+  font-size: 5vw;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+.skills .skills_content>i:hover{
+  color: #38CDFA;
+}
+/* /................................ skills section end .................................  */
+/* .......................................contant section start ...................................  */
+/* .contact{
+  padding: 3vw 4vw 5vw 4vw;
+}
+.contact h1{
+  font-size: 6vw;
+  text-align: center;
+  margin-bottom: 3vw;
+}
+.contact h1 span>a{
+  text-decoration: none;
+}
+.contact h1 span>a:nth-child(1){
+  color: #FC626A;
+}
+.contact p{
+  text-align: center;
+} */
+
+.contact{
+  padding: 3vw 4vw 3vw 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .heading{
+  text-align: center;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.contact_container{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3vw;
+}
+.contact_item{
+  width: 47%;
+  background: var(--text);
+  color: var(--black);
+  padding: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+} 
+
+.contact_item h3{
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.contact_item a{
+color: var(--black);
+text-decoration: none;
+}
+.contact_item p{
+  color: var(--black);
+}
+.contact_item i{
+  font-size: 2vw;
+  color: var(--black);
+  margin-right: 10px;
+}
+
+.contact .create{
+  text-align: center;
+  margin-top: 3vw;
+}
+.contact .create>a{
+  color: var(--text);
+}
+
+/* button top code ----------------------------------------------------  */
+button {
+  display: none;
+  cursor: pointer;
+  position: fixed; 
+  bottom: 40px;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--text);
+  border: none;
+}
+
+.btn i{
+  font-size: 3vw;
+  color: var(--black);
+}
+
+.chat{
+  margin-top: 3rem;
+  cursor: pointer;
+}
